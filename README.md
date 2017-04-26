@@ -1,6 +1,6 @@
 # npmdoc-cordova-plugin-network-information
 
-#### api documentation for  [cordova-plugin-network-information (v1.3.2)](https://github.com/apache/cordova-plugin-network-information#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-cordova-plugin-network-information.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cordova-plugin-network-information) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cordova-plugin-network-information.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cordova-plugin-network-information)
+#### basic api documentation for  [cordova-plugin-network-information (v1.3.2)](https://github.com/apache/cordova-plugin-network-information#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-cordova-plugin-network-information.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cordova-plugin-network-information) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cordova-plugin-network-information.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cordova-plugin-network-information)
 
 #### Cordova Network Information Plugin
 
@@ -112,7 +112,8 @@
         "test": "npm run jshint"
     },
     "types": "./types/index.d.ts",
-    "version": "1.3.2"
+    "version": "1.3.2",
+    "bin": {}
 }
 ```
 
