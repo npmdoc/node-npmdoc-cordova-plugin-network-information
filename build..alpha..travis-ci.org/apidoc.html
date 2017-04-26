@@ -61,12 +61,70 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.cordova-plugin-network-information">module cordova-plugin-network-information</a><ol>
 
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cordova-plugin-network-information.</span>index</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-plugin-network-information.index">module cordova-plugin-network-information.index</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-network-information.index.getConnectionInfo">
+            function <span class="apidocSignatureSpan">cordova-plugin-network-information.index.</span>getConnectionInfo
+            <span class="apidocSignatureSpan">(success, fail, args, env)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.cordova-plugin-network-information" id="apidoc.module.cordova-plugin-network-information">module cordova-plugin-network-information</a></h1>
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-plugin-network-information.index" id="apidoc.module.cordova-plugin-network-information.index">module cordova-plugin-network-information.index</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-network-information.index.getConnectionInfo" id="apidoc.element.cordova-plugin-network-information.index.getConnectionInfo">
+        function <span class="apidocSignatureSpan">cordova-plugin-network-information.index.</span>getConnectionInfo
+        <span class="apidocSignatureSpan">(success, fail, args, env)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getConnectionInfo = function (success, fail, args, env) {
+    var result = new PluginResult(args, env);
+    result.ok(currentConnectionType());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     */
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
+        if (action.equals(&#x22;getConnectionInfo&#x22;)) {
+this.connectionCallbackContext = callbackContext;
+NetworkInfo info = sockMan.getActiveNetworkInfo();
+String connectionType = &#x22;&#x22;;
+try {
+    connectionType = this.<span class="apidocCodeKeywordSpan">getConnectionInfo</span>(info).get(&#x22;type&#x22;).toString();
+} catch (JSONException e) {
+    LOG.d(LOG_TAG, e.getLocalizedMessage());
+}
+
+PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, connectionType);
+pluginResult.setKeepCallback(true);
+callbackContext.sendPluginResult(pluginResult);
+...</pre></li>
+    </ul>
+
 
 </div>
 
